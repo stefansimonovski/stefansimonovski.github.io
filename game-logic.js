@@ -26,20 +26,23 @@ export function GameLogic(fields){
         var matched = $(".match")
         if(matched.length == fields){
             alert("You Win")
+            this.stopCountdown();
         }
         var selected = Array.from($(".selected"))
         selected.forEach(element =>{
             element.classList.remove("selected")
         })
     }
-    this.startCountdown = function(){
-        return setInterval( ()=>{
+    this.startCountdown = setInterval( ()=>{
             this.timer--
             $(".timer").html("Time: " + that.timer)
             if(that.timer == 0){
                 alert("Game Over");
                 $("#main-container").html("");
+                this.stopCountdown();
             }
         }, 1000);
+    this.stopCountdown = function(){
+        clearInterval(this.startCountdown)
     }
 }

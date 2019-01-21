@@ -8,8 +8,26 @@ export function gameStart(fields){
     var gameLogic = new GameLogic(fields);
     var $mainContainer = $("#main-container");
     if (fields == 12){
-        gameLogic.startCountdown();
-        var $gameHead = $("<div>")
+        $mainContainer
+            .html("")
+            .addClass("twelve-fields")
+    }else if(fields == 16){
+        $mainContainer
+            .html("")
+            .addClass("sixteen-fields")
+    }else if(fields == 20){
+        $mainContainer
+            .html("")
+            .addClass("twenty-fields")
+    }else if(fields == 24){
+        $mainContainer
+            .html("")
+            .addClass("twentyfour-fields")
+    }
+        
+    
+    
+            var $gameHead = $("<div>")
                             .addClass("game-head")
                             .append($("<span>")
                             .addClass("timer")
@@ -17,10 +35,7 @@ export function gameStart(fields){
                             .append($("<span>")
                             .addClass("moves")
                             .html("Flips: " + gameLogic.flips));
-        $mainContainer
-            .html("")
-            .addClass("twelve-fields")
-            $mainContainer.append($gameHead)
+    $mainContainer.append($gameHead)
         for(var i = 0; i < images.imagesArray.length; i++){
             var $field = $("<div>")
             $field.addClass("field")
@@ -76,21 +91,7 @@ export function gameStart(fields){
                 .addClass("picture")
                 .addClass("hidden")
             $field.append(picture)
-            
             $mainContainer.append($field);
         }
-    }else if(fields == 16){
-        $mainContainer
-            .html("")
-            .addClass("sixteen-fields")
-    }else if(fields == 20){
-        $mainContainer
-            .html("")
-            .addClass("twenty-fields")
-    }else if(fields == 24){
-        $mainContainer
-            .html("")
-            .addClass("twentyfour-fields")
-    }
 
 }
