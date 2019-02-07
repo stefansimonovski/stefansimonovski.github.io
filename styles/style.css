@@ -206,6 +206,12 @@ body{
     .game-select select, .game-select button{
         font-size: 24px;
     }
+    .win-div span{
+        font-size: 18px;
+    }
+    .win-div button, .win-div select{
+        font-size: 14px;
+    }
   }
 
 
