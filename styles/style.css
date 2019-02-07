@@ -118,7 +118,7 @@ body{
     transform: rotateY(180deg);
 }
 .match:last-child{
-    border: 5px solid blue;
+    border: 5px solid #00694B;
     transform: rotate(0deg);
 }
 .clicked div{
