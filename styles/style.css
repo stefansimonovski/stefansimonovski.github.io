@@ -170,6 +170,42 @@ body{
 @keyframes slide {
     0%{top: -100%;}
     100%{top: 0;}
+}
+@media only screen and (max-width: 600px) {
+    #main-container{
+        grid-gap: 5px;
+    }
+    .twelve-fields{
+        grid-template-rows: repeat(4, 50px);
+        grid-template-columns: repeat(4, 50px);
+    }
+    .sixteen-fields{
+        grid-template-rows: repeat(5, 50px);
+        grid-template-columns: repeat(4, 50px);  
+    }
+    .twenty-fields{
+        grid-template-rows: repeat(5, 50px);
+        grid-template-columns: repeat(5, 50px);  
+    }
+    .twentyfour-fields{
+        grid-template-rows: repeat(5, 50px);
+        grid-template-columns: repeat(6, 50px);  
+    }
+    .game-select{
+        margin-bottom: 50px;
+    }
+    .game-select span:first-child{
+        margin-bottom: 50px;
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .game-select span:nth-child(2){
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+    .game-select select, .game-select button{
+        font-size: 24px;
+    }
   }
 
 
