@@ -106,11 +106,9 @@ export function GameLogic(fields){
                                         this.flips++;
                                         $(".moves").html("Flips: " + this.flips);
                                         this.match1 = event.target.parentNode.nextSibling.firstChild.id;
-                                        console.log("match 1 ", this.match1)
                                     }else if(this.moves === 2){
                                         this.audioControler.chooseSound("flip");
                                         this.match2 = event.target.parentNode.nextSibling.firstChild.id;
-                                        console.log("match 2 ", this.match2);
                                         setTimeout(this.checkMatch, 1000);
                                     }else{
                                         return;
