@@ -174,22 +174,23 @@ body{
 @media only screen and (max-width: 600px) {
     #main-container{
         grid-gap: 5px;
+        padding-bottom: 300px
     }
     .twelve-fields{
-        grid-template-rows: repeat(4, 40px);
-        grid-template-columns: repeat(4, 40px);
+        grid-template-rows: repeat(4, 45px);
+        grid-template-columns: repeat(4, 45px);
     }
     .sixteen-fields{
-        grid-template-rows: repeat(5, 40px);
-        grid-template-columns: repeat(4, 40px);  
+        grid-template-rows: repeat(5, 45px);
+        grid-template-columns: repeat(4, 45px);  
     }
     .twenty-fields{
-        grid-template-rows: repeat(5, 40px);
-        grid-template-columns: repeat(5, 40px);  
+        grid-template-rows: repeat(5, 45px);
+        grid-template-columns: repeat(5, 45px);  
     }
     .twentyfour-fields{
-        grid-template-rows: repeat(5, 40px);
-        grid-template-columns: repeat(6, 40px);  
+        grid-template-rows: repeat(5, 45px);
+        grid-template-columns: repeat(6, 45px);  
     }
     .game-select{
         margin-bottom: 50px;
@@ -207,13 +208,25 @@ body{
         font-size: 24px;
     }
     .game-head{
-        font-size: 18px;
+        font-size: 16px;
     }
     .win-div span{
         font-size: 18px;
     }
     .win-div button, .win-div select{
         font-size: 14px;
+    }
+    .field-back{
+        border: 2px solid black;
+    }
+    .field-front{
+        border: 2px solid black; 
+    }
+    .selected{
+        border: 2px solid red;
+    }
+    .match:last-child{
+        border: 2px solid #00694B;
     }
   }
 
