@@ -6,9 +6,14 @@ import {Image5} from "/images.js";
 import {Image6} from "/images.js";
 import {Image7} from "/images.js";
 import {Image8} from "/images.js";
+import {Image9} from "/images.js";
+import {Image10} from "/images.js";
+import {Image11} from "/images.js";
+import {Image12} from "/images.js";
 
 export function GenerateImages(numofImg){
     this.images = [];
+    this.imagesArray = [];
     for(var j = 1; j < (numofImg / 2) + 1; j++){
         switch(j){
             case 1:
@@ -35,8 +40,26 @@ export function GenerateImages(numofImg){
              case 8:
                 this.images.push(new Image8());
                 break;
+            case 9:
+                this.images.push(new Image9());
+                break;
+            case 10:
+                this.images.push(new Image10());
+                break;
+            case 11:
+                this.images.push(new Image11());
+                break;
+            case 12:
+                this.images.push(new Image12());
+                break;
         }
     }
-    this.imagesArray = this.images.concat(this.images);
-    this.imagesArray.sort(() => 0.5 - Math.random());
+    this.sortImages = function (){
+        this.imagesArray = this.images.concat(this.images);
+        this.imagesArray.sort(() => 0.5 - Math.random());
+        return this.imagesArray;
+    }
+    this.sortImages();
+    
+    
 }
