@@ -176,20 +176,20 @@ body{
         grid-gap: 5px;
     }
     .twelve-fields{
-        grid-template-rows: repeat(4, 50px);
-        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(4, 40px);
+        grid-template-columns: repeat(4, 40px);
     }
     .sixteen-fields{
-        grid-template-rows: repeat(5, 50px);
-        grid-template-columns: repeat(4, 50px);  
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: repeat(4, 40px);  
     }
     .twenty-fields{
-        grid-template-rows: repeat(5, 50px);
-        grid-template-columns: repeat(5, 50px);  
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: repeat(5, 40px);  
     }
     .twentyfour-fields{
-        grid-template-rows: repeat(5, 50px);
-        grid-template-columns: repeat(6, 50px);  
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: repeat(6, 40px);  
     }
     .game-select{
         margin-bottom: 50px;
