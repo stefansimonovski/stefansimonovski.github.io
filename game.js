@@ -30,11 +30,13 @@ export function Game(fields){
 
     this.$gameHead.attr("id", "game-head")
                     .append($("<span>")
+                        .append($("<div>")
                         .addClass("timer")
-                        .html("Time: " + this.gameLogic.timer))
+                        .html("Time: " + this.gameLogic.timer)))
                     .append($("<span>")
+                        .append($("<div>")
                         .addClass("moves")
-                        .html("Flips: " + this.gameLogic.flips))
+                        .html("Flips: " + this.gameLogic.flips)))
                     .prependTo(this.$mainContainer);
     
     this.gameLogic.startGame(fields);

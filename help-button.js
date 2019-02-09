@@ -1,5 +1,6 @@
 export function HelpButton (){
     $("#game-head")
+            .append($("<span>")
             .append($("<button>")
                 .text("HELP!")
                 .addClass("help-button")
@@ -23,5 +24,5 @@ export function HelpButton (){
                     setTimeout(()=>{
                         $(".help-class").removeClass("help-class");
                     }, 500)
-                }))
+                })))
 }
