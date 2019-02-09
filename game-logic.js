@@ -30,6 +30,10 @@ export function GameLogic(fields){
         this.selected.forEach(element => {
             element.classList.remove("selected");
         });
+        this.notMatch = Array.from($(".not-match-clicked"));
+        this.notMatch.forEach(element => {
+            element.classList.remove("not-match-clicked");
+        })
     }
     this.match = function(){
         this.audioControler.chooseSound("match");
@@ -46,7 +50,6 @@ export function GameLogic(fields){
             element.classList.add("match")
         });
         this.notMatch = Array.from($(".not-match-clicked"));
-        console.log(this.notMatch)
         this.notMatch.forEach(element => {
             element.classList.remove("not-match");
         })

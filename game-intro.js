@@ -1,11 +1,11 @@
 import { Game } from "./game.js"
 
-export function GameIntro(params1, ){
+export function GameIntro(params){
     $("#main-container")
                 .append($("<div>")
                     .addClass("win-div")
                     .append($("<span>")
-                        .html(params1))
+                        .html(params))
                     .append($("<select>")
                         .attr("id", "game-select")
                         .append($("<option>")
