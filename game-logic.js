@@ -1,6 +1,7 @@
 import {GenerateImages} from "./generate-images.js";
 import { GameIntro } from "./game-intro.js";
 import { AudioControler } from "./audio-controler.js";
+import { HelpButton } from "./help-button.js"
 
 export function GameLogic(fields){
     this.moves = 0;
@@ -44,6 +45,11 @@ export function GameLogic(fields){
             element.classList.remove("selected")
             element.classList.add("match")
         });
+        this.notMatch = Array.from($(".not-match-clicked"));
+        console.log(this.notMatch)
+        this.notMatch.forEach(element => {
+            element.classList.remove("not-match");
+        })
         this.checkWin();
     }
     this.startCountdown = setInterval( () => {
@@ -83,6 +89,7 @@ export function GameLogic(fields){
     this.startGame = function(fields){
         this.images = new GenerateImages(fields);
         this.audioControler = new AudioControler();
+        this.helpButton = new HelpButton();
         this.$mainContainer = $("#main-container");
         for(var i = 0; i < this.images.imagesArray.length; i++){
             $("<div>").addClass("main-field")
@@ -94,6 +101,7 @@ export function GameLogic(fields){
                             .append($("<span>")
                                 .addClass("field-front")
                                 .append($("<img>")
+                                    .addClass("not-match")
                                     .attr("id", this.images.imagesArray[i].name)
                                     .attr("src", this.images.imagesArray[i].src)))
                             .appendTo(this.$mainContainer)
@@ -115,11 +123,11 @@ export function GameLogic(fields){
                                     }
                                     event.target.parentNode.parentNode.classList.add("clicked")
                                     event.target.parentNode.classList.add("selected");
-                                    event.target.parentNode.nextSibling.classList.add("selected");  
+                                    event.target.parentNode.nextSibling.classList.add("selected");
+                                    event.target.parentNode.nextSibling.firstChild.classList.add("not-match-clicked")  
                                 }else{
                                     return;
                                 }
-                                
                             });
         }
     }

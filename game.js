@@ -28,7 +28,7 @@ export function Game(fields){
             .addClass("twentyfour-fields")
     }
 
-    this.$gameHead.addClass("game-head")
+    this.$gameHead.attr("id", "game-head")
                     .append($("<span>")
                         .addClass("timer")
                         .html("Time: " + this.gameLogic.timer))
