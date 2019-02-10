@@ -7,22 +7,17 @@ export function HelpButton (){
                 .on("click", (event)=>{
                     event.preventDefault();
                     this.notMatch = Array.from($(".not-match"));
-                    this.notMatchId = this.notMatch.map(i =>{
-                            return i.id
+                    this.notMatchId = this.notMatch.map(element =>{
+                            return element.id
                     });
-                    this.allDuplicates = this.notMatchId.filter((item, index) =>{
-                        return this.notMatchId.indexOf(item) != index
-                    });
-                    this.firstDuplicate = this.notMatch.map( (j) => {
-                        return j.id == this.allDuplicates[0]
-                    });
-                    for(var k = 0; k < this.notMatch.length; k++){
-                        if(this.firstDuplicate[k]){
-                            this.notMatch[k].parentNode.previousSibling.classList.add("help-class") 
+                    for(var i = 0; i < this.notMatch.length; i++){
+                        if(this.notMatchId[0] == this.notMatchId[i]){
+                            this.notMatch[0].parentNode.previousSibling.classList.add("help-class") 
+                            this.notMatch[i].parentNode.previousSibling.classList.add("help-class") 
                         }
                     };
                     setTimeout(()=>{
                         $(".help-class").removeClass("help-class");
-                    }, 500)
+                    }, 500);
                 })))
 }
