@@ -1,5 +1,5 @@
 export function AudioControler(){
-    this.flipSoundSrc = "./audio/card-flip.wav";
+    this.flipSoundSrc = "./audio/card-flip.mp3";
     this.missSoundSrc = "./audio/miss.mp3";
     this.matchSoundSrc = "./audio/match.mp3";
     this.winSoundSrc = "./audio/win.mp3";

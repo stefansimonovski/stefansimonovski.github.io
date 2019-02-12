@@ -1,4 +1,5 @@
-import { Game } from "./game.js"
+import { Game } from "./game.js";
+import * as jquery from "./lib/jquery.js";
 
 export function GameIntro(params){
     $("#main-container")

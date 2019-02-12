@@ -2,6 +2,7 @@ import {GenerateImages} from "./generate-images.js";
 import { GameIntro } from "./game-intro.js";
 import { AudioControler } from "./audio-controler.js";
 import { HelpButton } from "./help-button.js"
+import * as jquery from "./lib/jquery.js";
 
 export function GameLogic(fields){
     this.moves = 0;
